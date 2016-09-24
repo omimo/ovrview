@@ -25,6 +25,7 @@ var Query = {
   AUDIO_URL: 'audio',
   START_YAW: 'start_yaw',
   IS_YAW_ONLY: 'is_yaw_only',
+  AUTO_PLAY: 'auto_play',
 };
 
 function SceneLoader() {
@@ -73,6 +74,7 @@ SceneLoader.prototype.loadFromGetParams_ = function() {
     audio: Util.getQueryParameter(Query.AUDIO_URL),
     isYawOnly: this.parseBoolean_(Util.getQueryParameter(Query.IS_YAW_ONLY)),
     yaw: THREE.Math.degToRad(Util.getQueryParameter(Query.START_YAW)),
+    auto_play: Util.getQueryParameter(Query.AUTO_PLAY),
   };
 
   var count = 0;

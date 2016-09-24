@@ -1,11 +1,14 @@
 {
-  "name": "vrview",
-  "version": "0.2.0",
+  "name": "ovrview",
+  "version": "0.2.1",
   "description": "Embed VR content into your webpage.",
   "main": "index.js",
   "//": "TODO: Re-add dependencies once vanilla versions can be used again.",
   "dependencies": {
-    "es6-promise": "^3.0.2"
+    "browserify": "^13.1.0",
+    "derequire": "^2.0.3",
+    "es6-promise": "^3.0.2",
+    "watchify": "^3.7.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -20,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/google/vrview.git"
+    "url": "git+https://github.com/omimo/ovrview.git"
   },
   "author": "",
   "license": "Apache-2.0",

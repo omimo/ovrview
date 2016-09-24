@@ -55,6 +55,7 @@ var videoElement = null;
 // TODO: Make this not global.
 // Currently global in order to allow callbacks.
 var loadedScene = null;
+var auto_play = false;
 
 function init() {
   if (!Util.isWebGLEnabled()) {
@@ -85,6 +86,9 @@ function onSceneLoad(scene) {
   var params = {
     isStereo: scene.isStereo,
   }
+
+  auto_play = scene.auto_play;
+
   renderer.setDefaultLookDirection(scene.yaw || 0);
 
   if (scene.preview) {
@@ -201,7 +205,9 @@ function showStats() {
 }
 
 function loop(time) {
-  stats.begin();
+  stats.begin();  
+  if (auto_play)
+    renderer.camera.parent.rotation.y += .0002;
   renderer.render(time);
   stats.end();
   requestAnimationFrame(loop);

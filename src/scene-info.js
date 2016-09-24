@@ -28,6 +28,7 @@ function SceneInfo(opt_params) {
   this.video = params.video;
   this.yaw = params.yaw || 0;
   this.isYawOnly = params.isYawOnly;
+  this.auto_play = params.auto_play || false;
 }
 
 SceneInfo.prototype.isComplete = function() {
@@ -44,6 +45,7 @@ SceneInfo.prototype.toObject = function() {
     audio: this.audio,
     yaw: this.yaw || null,
     video: this.video || null,
+    auto_play: this.auto_play,
   };
 };
 
