@@ -124,8 +124,13 @@ function onSceneLoad(scene) {
     // Otherwise, just render the photosphere.
     loadImage(scene.image, params);
   }
+  document.body.addEventListener('touchstart', onUserTouch);
+  document.body.addEventListener('mousedown', onUserTouch);
+  // console.log('Loaded scene', scene);
+}
 
-  console.log('Loaded scene', scene);
+function onUserTouch() {
+  auto_play = false;
 }
 
 function onVideoLoad() {
@@ -154,7 +159,7 @@ function onVideoLoad() {
 function onVideoTap() {
   hideError();
   videoElement.play();
-
+  
   // Prevent multiple play() calls on the video element.
   document.body.removeEventListener('touchend', onVideoTap);
 }

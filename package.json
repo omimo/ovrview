@@ -8,17 +8,18 @@
     "browserify": "^13.1.0",
     "derequire": "^2.0.3",
     "es6-promise": "^3.0.2",
+    "uglifyjs": "^2.4.10",
     "watchify": "^3.7.0"
   },
   "devDependencies": {},
   "scripts": {
     "copy": "cp ../webvr-boilerplate/build/webvr-manager.js node_modules/webvr-boilerplate/build/",
-    "build": "browserify src/main.js | derequire > build/vrview.js",
-    "build-min": "browserify src/main.js | derequire | uglifyjs -c > build/vrview.min.js",
-    "build-analytics": "browserify src/with-analytics.js | derequire > build/vrview-analytics.js",
-    "build-analytics-min": "browserify src/with-analytics.js | derequire | uglifyjs -c > build/vrview-analytics.min.js",
+    "build": "browserify src/main.js | derequire > build/ovrview.js",
+    "build-min": "browserify src/main.js | derequire | uglifyjs -c > build/ovrview.min.js",
+    "build-analytics": "browserify src/with-analytics.js | derequire > build/ovrview-analytics.js",
+    "build-analytics-min": "browserify src/with-analytics.js | derequire | uglifyjs -c > build/ovrview-analytics.min.js",
     "build-dms": "uglifyjs scripts/js/device-motion-sender.js > build/device-motion-sender.min.js",
-    "watch": "watchify src/main.js -v -d -o build/vrview.js",
+    "watch": "watchify src/main.js -v -d -o build/ovrview.js",
     "deploy": "./scripts/deploy.sh"
   },
   "repository": {
@@ -28,7 +29,7 @@
   "author": "",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/google/vrview/issues"
+    "url": "https://github.com/omimo/ovrview/issues"
   },
-  "homepage": "https://github.com/google/vrview#readme"
+  "homepage": "https://github.com/omimo/ovrview#readme"
 }

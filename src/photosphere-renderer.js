@@ -225,7 +225,7 @@ PhotosphereRenderer.prototype.updateRenderRect_ = function() {
 };
 
 PhotosphereRenderer.prototype.onModeChange_ = function(newMode, oldMode) {
-  console.log('onModeChange_', newMode);
+  // console.log('onModeChange_', newMode);
 
   var coefficients;
   if (newMode == WebVRManager.Modes.VR) {
@@ -244,7 +244,7 @@ PhotosphereRenderer.prototype.onModeChange_ = function(newMode, oldMode) {
 };
 
 PhotosphereRenderer.prototype.onViewerChange_ = function(newViewer) {
-  console.log('onViewerChange_', newViewer);
+  // console.log('onViewerChange_', newViewer);
 
   // Reset the photosphere with new coefficients.
   this.updateMaterial_();
